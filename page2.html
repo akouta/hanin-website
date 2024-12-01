@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison: Static vs Dynamic Web Pages</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#static-web-pages">Static Web Pages 📄</a>
+        <a href="#dynamic-web-pages">Dynamic Web Pages 💻</a>
+        <a href="#chart-section">Comparison Chart 📊</a>
+    </nav>
+
+    <div class="typing-container">
+        <h1 id="dynamic-text"></h1>
+    </div>
+
+    <section id="static-web-pages">
+        <h2>Static Web Pages 📄:</h2>
+        <table>
+            <tr>
+                <th>Features</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>File Type</td>
+                <td>Exist as individual files with extensions like .htm or .html</td>
+            </tr>
+            <tr>
+                <td>Content</td>
+                <td>Typically contains text, hyperlinks, photos, and graphics</td>
+            </tr>
+            <tr>
+                <td>Interactive Media</td>
+                <td>May include:
+                    <ul>
+                        <li>Movie Clips (YouTube, etc.) 🎥</li>
+                        <li>Adobe Flash Presentations ✨</li>
+                        <li>Other media types 🌟</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="dynamic-web-pages">
+        <h2>Dynamic Web Pages 💻:</h2>
+        <table>
+            <tr>
+                <th>Features</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>CRUD Functions</td>
+                <td>Provide Create, Retrieve, Update, and Delete operations for company records</td>
+            </tr>
+            <tr>
+                <td>File Type</td>
+                <td>Exist as files with extensions like .jsp, .php, .asp, or .aspx</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="chart-section">
+        <h2>Comparison Chart 📊:</h2>
+        <canvas id="comparisonChart"></canvas>
+    </section>
+    <a href="index.html" class="back-to-top">Back to Page 1 🔙</a>
+    <footer class="footer">
+        <p>©️ 2024 Hanona Page. Made by Haneen Al-Houmaidy ♥️.</p>
+    </footer>
+
+    <script>
+        const dynamicText = document.getElementById("dynamic-text");
+        const text = "Comparison: Static vs Dynamic Web Pages 🌐";
+        let index = 0;
+
+        function typeDynamicText() {
+            if (index < text.length) {
+                dynamicText.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeDynamicText, 100);
+            }
+        }
+
+        typeDynamicText();
+
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+        const comparisonChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Ease of Creation', 'User Interaction', 'Performance', 'Cost'],
+                datasets: [
+                    {
+                        label: 'Static Web Pages',
+                        data: [9, 2, 7, 10],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1,
+                    },
+                    {
+                        label: 'Dynamic Web Pages',
+                        data: [5, 10, 9, 6],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                },
+            },
+        });
+
+        const quoteText = "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress and giving birth to evolution.";
+        const quoteElement = document.getElementById("einstein-quote");
+        let quoteIndex = 0;
+
+        function typeQuote() {
+            if (quoteIndex < quoteText.length) {
+                quoteElement.textContent += quoteText.charAt(quoteIndex);
+                quoteIndex++;
+                setTimeout(typeQuote, 100);
+            } else {
+                setTimeout(() => {
+                    quoteElement.textContent = "";
+                    quoteIndex = 0;
+                    typeQuote();
+                }, 5000);
+            }
+        }
+
+        window.onload = () => {
+            typeQuote();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanona Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#about-me">About Me</a>
+        <a href="#table-of-subjects">Table of Subjects</a>
+        <a href="#soft-skills">Soft Skills</a>
+        <a href="#technical-skills">Technical Skills</a>
+        <a href="#certificates">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#timeline">Project Timeline</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="typing-container">
+        <h1 id="dynamic-text"></h1>
+    </div>
+
+    <section id="about-me" class="about-me">
+        <img src="logo.png" alt="My Photo" class="profile-pic">
+        <p class="intro">
+            Senior student specializing in Computer and Network Security at Imam Abdulrahman Bin Faisal University, dedicated to safeguarding digital environments and optimizing network efficiency. With a strong passion for cybersecurity and web development, committed to creating innovative solutions that strengthen technological resilience and enhance seamless operations. My interests extend to designing and building dynamic websites, merging creativity with technical expertise to deliver impactful digital experiences.
+        </p>
+    </section>
+
+    <table id="table-of-subjects">
+        <tr>
+            <th>Subject</th>
+            <th>Grade</th>
+            <th>Course Instructor</th>
+        </tr>
+        <tr>
+            <td>Web Security</td>
+            <td>A+</td>
+            <td>Dr. Ola Hegazy</td>
+        </tr>
+        <tr>
+            <td>Introduction to IoT</td>
+            <td>A+</td>
+            <td>Remya Gorge</td>
+        </tr>
+        <tr>
+            <td>Network Security</td>
+            <td>B+</td>
+            <td>Sajithunisa Hussain</td>
+        </tr>
+        <tr>
+            <td>Digital Forensics</td>
+            <td>A+</td>
+            <td>Dr. Amal Alomari</td>
+        </tr>
+    </table>
+
+    <section id="soft-skills">
+        <h2>Soft Skills 🪄:</h2>
+        <ul>
+            <li>Project management.</li>
+            <li>Effective communication.</li>
+            <li>Teamwork and collaboration.</li>
+        </ul>
+    </section>
+
+    <section id="technical-skills">
+        <h2>Technical Skills 💡:</h2>
+        <ul>
+            <li>Cybersecurity techniques.</li>
+            <li>Digital transformation strategies.</li>
+            <li>Network management and routing.</li>
+        </ul>
+    </section>
+
+    <section id="certificates">
+        <h2>Certificates 📜:</h2>
+        <ul>
+            <li>Data Analysis Certification - IBM.</li>
+            <li>Cybersecurity Essentials Certification - CISCO.</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects 📑:</h2>
+        <ul>
+            <li>Wireless Network Design and Simulation.</li>
+            <li>Digital Network Testing for External Cyber Interactions.</li>
+            <li>Cybercrime Investigation: Advanced Forensic Analysis of Live RAM and Phishing Evidence.</li>
+        </ul>
+    </section>
+
+    <section id="timeline">
+        <h2>Project Timeline 🗓️:</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-date">May 2024</div>
+                <div class="timeline-content">
+                    <h3>Wireless Network Design:</h3>
+                    <ul>
+                        <li>Led a team of 3 students to design a network including Bluetooth, IoT, and Wi-Fi.</li>
+                        <li>Tested network connectivity, speed, and security across various wireless methods.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                    <h3>Digital Network Testing:</h3>
+                    <ul>
+                        <li>Conducted digital security testing as part of a multi-disciplinary team.</li>
+                        <li>Analyzed results and evaluated the security level of electronic systems.</li>
+                        <li>Utilized digital twin models to develop and perform interactive tests on cyber networks.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Nov 2024</div>
+                <div class="timeline-content">
+                    <h3>Cybercrime Investigation:</h3>
+                    <ul>
+                        <li>Acquired live RAM using forensic tools such as Dumpit and Bulk Extractor.</li>
+                        <li>Extracted and analyzed phishing email evidence from the suspect's system.</li>
+                        <li>Confirmed involvement in cybercrime through evidence linking the suspect to malicious activities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <p><strong>📍 City:</strong> Eastern Province, Khobar.</p>
+        <p><strong>💌 Email:</strong> <a href="mailto:2230001166@iau.edu.sa">2230001166@iau.edu.sa</a></p>
+        <img src="logo.png" alt="Signature" class="signature">
+    </section>
+
+    <a href="page2.html" class="navigate-to-page-2">Go to Page 2</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
+
+    <footer class="footer">
+        <p>©️ 2024 Hanona Page. Made by Haneen Al-Houmaidy ♥️.</p>
+    </footer>
+
+    <script>
+        const dynamicText = document.getElementById("dynamic-text");
+        const text = "Welcome to Hanona Page 👩🏻‍💻.. ";
+        let index = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                dynamicText.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText, 100);
+            } else {
+                setTimeout(() => {
+                    dynamicText.style.animation = "shine 2s infinite";
+                }, 2000);
+            }
+        }
+
+        typeText();
+    </script>
+</body>
+</html>

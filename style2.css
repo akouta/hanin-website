@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(135deg, #fce4f8, #fde9ee);
+    color: #962E51;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#intro-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fde9ee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#intro-text {
+    font-size: 2em;
+    color: #962E51;
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+}
+
+.page-content.hidden {
+    display: none;
+}
+
+.page-content.show {
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #962E51;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #962E51;
+    }
+}
